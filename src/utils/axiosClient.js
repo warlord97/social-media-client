@@ -6,8 +6,15 @@ import {
   setItem,
 } from "./localStorageManager";
 
+let baseURL = 'http://localhost:4000/';
+console.log('env is',process.env.NODE_ENV);
+if(process.env.NODE_ENV === 'production'){
+  console.log('baseurl is',process.env.REACT_APP_SERVER_BASE_URL);
+  baseURL = process.env.REACT_APP_SERVER_BASE_URL
+}
+
 export const axiosClient = axios.create({
-  baseURL: process.env.REACT_APP_SERVER_BASE_URL,
+  baseURL,
   withCredentials: true,
 });
 
