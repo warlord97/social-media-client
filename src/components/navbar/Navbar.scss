@@ -1,0 +1,36 @@
+.Navbar {
+  height: 60px;
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: white;
+
+  .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .right-side{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+
+    .logout{
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .Navbar{
+    .container{
+      margin-inline: 20px;
+    }
+  }
+}
